@@ -1,4 +1,5 @@
 import 'package:e_commerce/widget/BigCard.dart';
+import 'package:e_commerce/widget/CartScreen.dart';
 import 'package:e_commerce/widget/ProductCard.dart';
 import 'package:e_commerce/widget/SectionHeader.dart';
 import 'package:flutter/material.dart';
@@ -6,10 +7,12 @@ import 'widget/TopSeller.dart';
 import 'widget/TopService.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,12 +20,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,13 +49,15 @@ class HomePage extends StatelessWidget {
             ),
             actions: [
               IconButton(
-                
                 icon: const Icon(Icons.notifications),
                 onPressed: () {},
               ),
               IconButton(
                 icon: const Icon(Icons.shopping_cart),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CartScreen()));
+                },
               ),
             ],
           ),
@@ -222,7 +229,7 @@ class HomePage extends StatelessWidget {
             ),
 
             SectionHeader("Spesial Menu Harga"),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
 
             Container(
               padding: const EdgeInsets.all(5.0),
@@ -235,7 +242,7 @@ class HomePage extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.2),
                     blurRadius: 8,
-                    offset: Offset(2, 4),
+                    offset: const Offset(2, 4),
                   ),
                 ],
               ),
@@ -316,12 +323,12 @@ class HomePage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 19),
-            BigCard(
+            const SizedBox(height: 19),
+            const BigCard(
               imagePath: 'assets/images/burger1 (5).jpg',
             ),
-            SizedBox(height: 19),
-            BigCard(
+            const SizedBox(height: 19),
+            const BigCard(
               imagePath: 'assets/images/burger1 (6).jpg',
             ),
 
@@ -336,7 +343,7 @@ class HomePage extends StatelessWidget {
                 shrinkWrap:
                     true, // Agar grid tidak scrollable, karena sudah ada SingleChildScrollView
                 physics:
-                    NeverScrollableScrollPhysics(), // Agar hanya scroll di SingleChildScrollView
+                    const NeverScrollableScrollPhysics(), // Agar hanya scroll di SingleChildScrollView
                 crossAxisCount: 2, // 2 kolom
                 crossAxisSpacing: 16.0, // Jarak antar kolom
                 mainAxisSpacing: 16.0, // Jarak antar baris
@@ -381,7 +388,7 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: 0, // Tetapkan indeks untuk tampilan default
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

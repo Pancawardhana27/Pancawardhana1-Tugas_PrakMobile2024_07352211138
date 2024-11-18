@@ -4,7 +4,7 @@ class BigCard extends StatelessWidget {
   final String imagePath;
   final String profileImagePath = 'assets/images/burger1 (3).png';
 
-  const BigCard({required this.imagePath});
+  const BigCard({super.key, required this.imagePath});
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -18,7 +18,7 @@ class BigCard extends StatelessWidget {
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
               blurRadius: 8,
-              offset: Offset(2, 4),
+              offset: const Offset(2, 4),
             ),
           ],
         ),
@@ -33,7 +33,7 @@ class BigCard extends StatelessWidget {
       ),
       Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
-          padding: EdgeInsets.only(left: 15, top: 10),
+          padding: const EdgeInsets.only(left: 15, top: 10),
           child: ClipOval(
             child: Image.asset(
               profileImagePath,
@@ -43,8 +43,8 @@ class BigCard extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 20, top: 10),
+        const Padding(
+          padding: EdgeInsets.only(left: 20, top: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
