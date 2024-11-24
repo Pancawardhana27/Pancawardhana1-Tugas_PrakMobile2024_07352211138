@@ -12,30 +12,30 @@ class _CartScreenState extends State<CartScreen> {
     {
       "name": "Burger Double Keju",
       "brand": "McDonalds",
-      "price": 140000, // Rp 140.000
-      "quantity": 1,
+      "price": 80000,
+      "quantity": 0,
       "image": 'assets/images/burger1 (5).jpg'
     },
     {
       "name": "Paket Hemat",
       "brand": "McDonalds",
-      "price": 200000, // Rp 200.000
-      "quantity": 1,
+      "price": 100000,
+      "quantity": 0,
       "image": 'assets/images/burger1 (13).jpg'
     },
     {
-      "name": "",
-      "brand": "",
-      "price": 120000, // Rp 30.000
-      "quantity": 1,
-      "image": 'assets/images/3.jpg'
+      "name": "Bubur Ayam",
+      "brand": "McDonalds",
+      "price": 50000,
+      "quantity": 0,
+      "image": 'assets/images/burger1 (11).jpg'
     },
     {
-      "name": "r",
-      "brand": "",
-      "price": 150000, // Rp 15.000
-      "quantity": 1,
-      "image": 'assets/images/4.jpg'
+      "name": "Es Cream",
+      "brand": "McDonalds",
+      "price": 30000,
+      "quantity": 0,
+      "image": 'assets/images/burger1 (8).jpg'
     },
   ];
 
@@ -275,11 +275,7 @@ class CheckoutScreen extends StatefulWidget {
 class _CheckoutScreenState extends State<CheckoutScreen> {
   String? selectedPaymentMethod;
 
-  final List<String> paymentMethods = [
-    'Kartu Kredit',
-    'PayPal',
-    'Transfer Bank'
-  ];
+  final List<String> paymentMethods = ['Kartu Kredit', 'Dana', 'Transfer Bank'];
 
   @override
   Widget build(BuildContext context) {

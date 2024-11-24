@@ -3,30 +3,32 @@ import 'package:e_commerce/widget/CartScreen.dart';
 import 'package:e_commerce/widget/ProductCard.dart';
 import 'package:e_commerce/widget/SectionHeader.dart';
 import 'package:flutter/material.dart';
+import 'package:e_commerce/widget/splash_screen.dart';
 import 'widget/TopSeller.dart';
 import 'widget/TopService.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
       title: "McDonalds",
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -352,32 +354,32 @@ class HomePage extends StatelessWidget {
                   ProductCard(
                     imagePath: 'assets/images/burger1 (5).jpg',
                     productName: 'Menu 1',
-                    productPrice: 'Rp 150.000',
+                    productPrice: 'Rp 80.000',
                   ),
                   ProductCard(
                     imagePath: 'assets/images/burger1 (11).jpg',
                     productName: 'Menu 2',
-                    productPrice: 'Rp 120.000',
+                    productPrice: 'Rp 50.000',
                   ),
                   ProductCard(
                     imagePath: 'assets/images/burger1 (10).jpg',
                     productName: 'Menu 3',
-                    productPrice: 'Rp 180.000',
+                    productPrice: 'Rp 40.000',
                   ),
                   ProductCard(
                     imagePath: 'assets/images/burger1 (9).jpg',
                     productName: 'Menu 4',
-                    productPrice: 'Rp 120.000',
+                    productPrice: 'Rp 45.000',
                   ),
                   ProductCard(
                     imagePath: 'assets/images/burger1 (7).jpg',
                     productName: 'Menu 5',
-                    productPrice: 'Rp 1400.000',
+                    productPrice: 'Rp 35.000',
                   ),
                   ProductCard(
                     imagePath: 'assets/images/burger1 (8).jpg',
                     productName: 'Menu 6',
-                    productPrice: 'Rp 160.000',
+                    productPrice: 'Rp 30.000',
                   ),
                 ],
               ),
